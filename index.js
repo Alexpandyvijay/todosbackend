@@ -253,4 +253,4 @@ app.delete('/delete/:id',(req,res)=>{
 
 app.use('/',router);
 mongoose.connect(process.env.MONGO_URL).then(()=>(console.log('DataBase connected successfully...')));
-app.listen(process.env.PORT,()=>(console.log(`application running on port ${process.env.PORT}`)));
+app.listen(process.env.PORT || 5000,()=>(console.log(`application running on port ${process.env.PORT}`)));
